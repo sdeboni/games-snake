@@ -11,7 +11,7 @@ const bounds = {
 
 let snake;
 
-const food = {};
+let food = {};
 
 window.addEventListener("DOMContentLoaded", () => {
   snake = buildSnake(7, speed);
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     segment.elem.style.visibility = "visible";
   }
 
-  spawnFood();
+  food = spawnFood();
 
   requestAnimationFrame(gameLoop);
 });
@@ -173,7 +173,7 @@ function advance(snake) {
   if (snake.head.row == food.row && snake.head.col == food.col) {
     food.ele.style.display = "none";
     growSnake();
-    spawnFood();
+    food = spawnFood();
   }
 }
 
