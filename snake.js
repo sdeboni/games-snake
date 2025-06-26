@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     segment.elem.style.visibility = "visible";
   }
 
-  food = spawnFood();
+  spawnFood();
 
   requestAnimationFrame(gameLoop);
 });
