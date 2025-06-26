@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+main#game {
+  width: 100vmin;
+  aspect-ratio: 1;
+  background: black;
+  display: grid;
+  place-items: center;
+
+  #game-area {
+    background: rgb(141,175,76);
+    width: 80vmin;
+    aspect-ratio: 1;
+    display: grid;
+    gap: 2px;
+    place-items: center;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    padding: 2px;
+  }
+  .segment {
+    background: black;
+    width: 100%;
+    aspect-ratio: 1;
+    visibility: hidden;
+  }
+  .food {
+    background: white;
+    border-radius: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}
